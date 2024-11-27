@@ -26,12 +26,12 @@ draw_map :: proc(t_map: ^tiled.Map, texture: rl.Texture2D) {
                 if gid == 0 {
                     continue
                 }
-                tile_x := (gid - 1) % u32(texture.width / t_map.tile_width)
-                tile_y := (gid - 1) / u32(texture.width / t_map.tile_width)
+                tile_x := i32(gid - 1) % (texture.width / t_map.tile_width)
+                tile_y := i32(gid - 1) / (texture.width / t_map.tile_width)
                 
                 src_rect := rl.Rectangle{
-                    x = f32(tile_x * u32(t_map.tile_width)),
-                    y = f32(tile_y * u32(t_map.tile_height)),
+                    x = f32(tile_x * t_map.tile_width),
+                    y = f32(tile_y * t_map.tile_height),
                     width = f32(t_map.tile_width),
                     height = f32(t_map.tile_height),
                 }
