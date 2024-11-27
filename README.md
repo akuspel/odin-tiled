@@ -8,8 +8,8 @@ import "../tiled"
 ```
 And then:
 ```odin
-tiled_map := tiled.parse_tilemap(tilemap_path)
-tileset_data := tiled.parse_tileset(tileset_path)
+tiled_map := tiled.parse_tilemap("path/to/your/map.json")
+tileset_data := tiled.parse_tileset("path/to/your/tileset.json")
 ```
 Thats all you need.
 
