@@ -13,7 +13,7 @@ tileset_data := tiled.parse_tileset("path/to/your/tileset.json")
 ```
 Thats all you need.
 
-Note: Base64 is not supported just CSV
+Note: Base64 is not supported, only CSV is.
 
 ## Example
 There is an example of a basic 2d platformer in the [example](example/) folder. It uses raylib for the tilemap rendering.
