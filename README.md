@@ -9,7 +9,7 @@ import "../tiled"
 And then:
 ```odin
 tiled_map := tiled.parse_tilemap("tileMap.json")
-tileset_data := parse_tileset(tileset_path)
+tileset_data := tiled.parse_tileset(tileset_path)
 ```
 Thats all you need.
 
