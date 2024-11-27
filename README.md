@@ -1,5 +1,5 @@
 # odin-tiled
-Loader for [Tiled]([https://ldtk.io/](https://www.mapeditor.org/)) maps. Uses Odin's `core:json` to unmarshal data into structs.
+A simple [Tiled]([https://ldtk.io/](https://www.mapeditor.org/)) map loader. Uses Odin's `core:json` to unmarshal data into structs.
 
 ## How to use
 Put the `tiled.odin` file into a `tiled` folder somewhere in your project. Then you can just do this (the path might be different):
