@@ -16,7 +16,7 @@ Thats all you need.
 Note: Base64 is not supported, only CSV is.
 
 ## Example
-There is an example of a basic 2d platformer in the [example](example/) folder. It uses raylib for the tilemap rendering.
+There is an example in the [example](example/) folder. It uses raylib for the tilemap rendering.
 
 ## Contributing
 Contributions are welcome!
