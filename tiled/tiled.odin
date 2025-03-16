@@ -53,12 +53,6 @@ parse_tileset :: proc(path: string) -> Tileset {
 	return ts
 }
 
-// Array of unsigned int (GIDs) or base64-encoded data
-ArrayOrString :: union {
-	[]i32,
-	string,
-}
-
 // Map describes a Tiled map.
 Map :: struct {
 	background_color:  string `json:"backgroundcolor"`,               // Hex-formatted color (#RRGGBB or #AARRGGBB) (optional).
@@ -106,7 +100,7 @@ Layer :: struct {
 	// TileLayer only
 	chunks:            []Chunk `json: "chunks"`,              // Array of chunks (optional, for ininite maps)
 	compression:       string `json: "compression"`,               // "zlib", "gzip" or empty (default)
-	data:              ArrayOrString `json: "data"`,
+	data:              []i32 `json: "data"`,                  // Array or string. Array of unsigned int (GIDs) or base64-encoded data
 	encoding:          string `json: "encoding"`,               // "csv" (default) or "base64"
 
 	// ObjectGroup only
@@ -123,7 +117,7 @@ Layer :: struct {
 
 // Chunk is used to store the tile layer data for infinite maps.
 Chunk :: struct {
-	data:              ArrayOrString `json: "data"`,
+	data:              any `json: "data"`,                  // Array of unsigned int (GIDs) or base64-encoded data
 	height:            i32 `json: "height"`,                  // Height in tiles
 	width:             i32 `json: "width"`,                  // Width in tiles
 	x:                 i32 `json: "x"`,                  // X coordinate in tiles
