@@ -9,6 +9,9 @@ import "../tiled"
 And then:
 ```odin
 tiled_map := tiled.parse_tilemap("path/to/your/map.json")
+```
+and/or
+```odin
 tileset_data := tiled.parse_tileset("path/to/your/tileset.json")
 ```
 Thats all you need.
@@ -16,7 +19,7 @@ Thats all you need.
 Note: Base64 is not supported, only CSV is.
 
 ## Example
-There is an example in the [example](example/) folder. It uses raylib for the tilemap rendering.
+There are 2 examples in the [example](example/) folder. The topdown example include spritesheet animations and wall collision. They both use raylib for the tilemap rendering.
 
 ## Contributing
 Contributions are welcome!
